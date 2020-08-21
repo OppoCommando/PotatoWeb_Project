@@ -22,9 +22,9 @@ namespace BusinessLayer
             DataAccess.Block.SaveBlockWithState(Block);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(string Statename)
         {
-            return DataAccess.Block.GetAll();
+            return DataAccess.Block.GetAll(Statename);
         }
 
         public DataTable GetAllBlockWithState()

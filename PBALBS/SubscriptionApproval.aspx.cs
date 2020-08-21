@@ -50,8 +50,8 @@ namespace PBALBS
         {
             BusinessLayer.Block objBlock = new BusinessLayer.Block();
             DataTable dt = new DataTable();
-
-            dt = objBlock.GetAll();
+            string Statename = "West Bengal";
+            dt = objBlock.GetAll(Statename);
 
             if (dt != null)
             {

@@ -32,7 +32,8 @@ namespace PBALBS
         protected void LoadDistrictList()
         {
             BusinessLayer.District ObjDistrict = new BusinessLayer.District();
-            DataTable dt = ObjDistrict.GetAll();
+            string Statename = "West Bengal";
+            DataTable dt = ObjDistrict.GetAll(Statename);
             DataRow dr = dt.NewRow();
             dr["DistrictId"] = "0";
             dr["DistrictName"] = "";

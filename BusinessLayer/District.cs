@@ -17,9 +17,9 @@ namespace BusinessLayer
            DataAccess.District.Save(District);
        }
 
-       public DataTable GetAll()
+       public DataTable GetAll(string Statename)
        {
-           return DataAccess.District.GetAll();
+           return DataAccess.District.GetAll(Statename);
        }
 
        public void Delete(int DistrictId)

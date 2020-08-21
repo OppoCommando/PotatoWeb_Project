@@ -87,6 +87,7 @@
     <Compile Include="Payment.cs" />
     <Compile Include="PotatoLoadingUnloading.cs" />
     <Compile Include="PotatoRate.cs" />
+    <Compile Include="PotatoType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="SMSTrigger.cs" />

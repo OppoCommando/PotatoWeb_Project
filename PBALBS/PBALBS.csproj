@@ -76,6 +76,7 @@
     <Content Include="AddEditBlockWithState.aspx" />
     <Content Include="addeditemployee.aspx" />
     <Content Include="AddEditState.aspx" />
+    <Content Include="AddEditUPBlock.aspx" />
     <Content Include="AddSubscription.aspx" />
     <Content Include="AgentMaster.aspx" />
     <Content Include="ApiConfiguration.aspx" />
@@ -167,6 +168,13 @@
     </Compile>
     <Compile Include="AddEditState.aspx.designer.cs">
       <DependentUpon>AddEditState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditUPBlock.aspx.cs">
+      <DependentUpon>AddEditUPBlock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditUPBlock.aspx.designer.cs">
+      <DependentUpon>AddEditUPBlock.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSubscription.aspx.cs">
       <DependentUpon>AddSubscription.aspx</DependentUpon>

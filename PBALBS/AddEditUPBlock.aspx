@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AddEditBlock.aspx.cs" Inherits="PBALBS.AddEditBlock" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AddEditUpBlock.aspx.cs" Inherits="PBALBS.AddEditUpBlock" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script type="text/javascript">
-    function Validation(field) {
-        var arr = field.parentElement.parentElement.getElementsByTagName("input");
+        function Validation(field) {
+            var arr = field.parentElement.parentElement.getElementsByTagName("input");
             if (arr.length == 1) {
                 if (arr[0].type == 'text') {
                     if (arr[0].value == '') {
@@ -50,7 +50,7 @@
 
             return count;
         }
-    </script>
+</script>
 </asp:Content>
 
 
@@ -81,17 +81,30 @@
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Block">
+                   
+                     
+                     <asp:TemplateField HeaderText="Block">
                         <ItemTemplate>
                             <asp:TextBox ID="txtBlock" runat="server" Width="250px" CssClass="textbox" Text='<%#Bind("BlockName") %>' ToolTip='<%#Bind("BlockName") %>'></asp:TextBox>
                         </ItemTemplate>
                     </asp:TemplateField>
+                   
+                     
+                     <asp:TemplateField HeaderText="Potato Type" >
+                        <ItemTemplate>
+                            <asp:DropDownList ID="dd2PotatoType" runat="server" CssClass="dropdown" DataValueField="PotatoTypeId" DataTextField="PotatoTypeName"></asp:DropDownList>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+
                     
                     <asp:TemplateField HeaderText="District">
                         <ItemTemplate>
                             <asp:DropDownList ID="ddlDistrict" runat="server" CssClass="dropdown" DataValueField="DistrictId" DataTextField="DistrictName"></asp:DropDownList>
                         </ItemTemplate>
                     </asp:TemplateField>
+
+
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkUpdate" runat="server" CommandName="AddUpdate" OnClientClick="Javascript:return Validation(this);"></asp:LinkButton>

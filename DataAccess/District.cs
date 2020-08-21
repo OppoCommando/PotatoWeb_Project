@@ -24,10 +24,11 @@ namespace DataAccess
             }
         }
 
-        public static DataTable GetAll()
+        public static DataTable GetAll(string Statename)
         {
             using (DataManager oDm = new DataManager())
             {
+                oDm.Add("@pStatename", SqlDbType.VarChar, 50, ParameterDirection.Input, Statename);
                 oDm.CommandType = CommandType.StoredProcedure;
                 return oDm.ExecuteDataTable("usp_District_GetAll");
             }

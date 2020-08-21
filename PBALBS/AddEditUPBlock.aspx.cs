@@ -8,7 +8,7 @@ using System.Data;
 
 namespace PBALBS
 {
-    public partial class AddEditBlock : System.Web.UI.Page
+    public partial class AddEditUpBlock : System.Web.UI.Page
     {
         public int BlockId
         {
@@ -26,22 +26,32 @@ namespace PBALBS
             {
                 BlockId = 0;
                 LoadDistrict();
+                LoadPotatoType();
                 LoadBlockList();
+                
             }
         }
 
         protected void LoadDistrict()
         {
             BusinessLayer.District ObjDistrict = new BusinessLayer.District();
-            string Statename = "West Bengal";
+            string Statename = "Uttar Pradesh";
             DataTable dt = ObjDistrict.GetAll(Statename);
             ViewState["District"] = dt;
+        }
+
+        protected void LoadPotatoType()
+        {
+            BusinessLayer.PotatoType ObjPotato = new BusinessLayer.PotatoType();
+            string Statename = "Uttar Pradesh";
+            DataTable dt = ObjPotato.GetAll(Statename);
+            ViewState["PotatoType"] = dt;
         }
 
         protected void LoadBlockList()
         {
             BusinessLayer.Block ObjBlock = new BusinessLayer.Block();
-            string Statename = "West Bengal";
+            string Statename = "Uttar Pradesh";
             DataTable dt = ObjBlock.GetAll(Statename);
             DataRow dr = dt.NewRow();
             dr["BlockId"] = "0";
@@ -65,11 +75,15 @@ namespace PBALBS
                 ddl.DataSource = (DataTable)ViewState["District"];
                 ddl.DataBind();
 
+                DropDownList dd2 = (DropDownList)e.Row.FindControl("dd2PotatoType");
+                dd2.DataSource = (DataTable)ViewState["PotatoType"];
+                dd2.DataBind();
+
                 if (BlockId == 0)
                 {
                     ((LinkButton)e.Row.FindControl("lnkUpdate")).Text = "Add";
                     ((CheckBox)e.Row.FindControl("ChkSelect")).Visible = false;
-                    
+
                 }
                 else
                 {
@@ -86,7 +100,7 @@ namespace PBALBS
             BusinessLayer.Block ObjBlock = new BusinessLayer.Block();
             ObjBlock.Delete(BlockId);
             LoadBlockList();
-          
+
         }
 
         protected void dgvBlock_RowCommand(object sender, GridViewCommandEventArgs e)

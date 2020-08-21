@@ -42,7 +42,7 @@ namespace PBALBS
                     Authcookie.Expires = Authticket.Expiration;
                 Response.Cookies.Add(Authcookie);
                 Session["UserId"] = "Admin";
-                Response.Redirect("AddEditBlock.aspx");
+                Response.Redirect("AddEditUPBlock.aspx");
 
             }
             else if (u.ToUpper() == "BIBHAS" && p.ToUpper() == "NOACCESS@123")

@@ -37,6 +37,7 @@ namespace DataAccess
 
        public static DataTable GetRateByDate(string Year)
        {
+            DateTime d = Convert.ToDateTime(Year);
            using (DataManager oDm = new DataManager())
            {
                oDm.Add("@pDate", SqlDbType.DateTime, Convert.ToDateTime(Year));

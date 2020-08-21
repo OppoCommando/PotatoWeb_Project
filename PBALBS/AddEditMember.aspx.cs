@@ -53,7 +53,8 @@ namespace PBALBS
         protected void LoadDistrict()
         {
             BusinessLayer.District ObjDistrict = new BusinessLayer.District();
-            DataTable dt = ObjDistrict.GetAll();
+            string Statename = "West Bengal";
+            DataTable dt = ObjDistrict.GetAll(Statename);
             if (dt != null)
             {
                 DataRow dr = dt.NewRow();
@@ -69,7 +70,8 @@ namespace PBALBS
         protected void LoadBlock()
         {
             BusinessLayer.Block ObjBlock = new BusinessLayer.Block();
-            DataTable dt = ObjBlock.GetAll();
+            string Statename = "West Bengal";
+            DataTable dt = ObjBlock.GetAll(Statename);
             if (dt != null)
             {
                 DataRow dr = dt.NewRow();

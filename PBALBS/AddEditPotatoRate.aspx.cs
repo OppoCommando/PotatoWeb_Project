@@ -34,7 +34,8 @@ namespace PBALBS
         protected void LoadDailyRate()
         {
             BusinessLayer.PotatoRate ObjRate = new BusinessLayer.PotatoRate();
-            string Date = ddlMonth.SelectedValue.Trim() + "/" + ddlDay.SelectedValue.Trim() + "/" + ddlYear.SelectedValue.Trim() + " 00:00:00.000";
+            string Date = ddlDay.SelectedValue.Trim() + "/" + ddlMonth.SelectedValue.Trim() + "/" + ddlYear.SelectedValue.Trim() + " 00:00:00.000";
+            string d = Date;
             DataTable dt = ObjRate.GetRateByDate(Date);
             if (dt != null)
             {
