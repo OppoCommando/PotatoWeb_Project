@@ -52,11 +52,12 @@ namespace PBALBS
         {
             BusinessLayer.Block ObjBlock = new BusinessLayer.Block();
             string Statename = "Uttar Pradesh";
-            DataTable dt = ObjBlock.GetAll(Statename);
+            DataTable dt = ObjBlock.UPBlockGetAll(Statename);
             DataRow dr = dt.NewRow();
             dr["BlockId"] = "0";
             dr["DistrictId"] = "0";
             dr["BlockName"] = "";
+            dr["PotatoTypeId"] = "0";
             dt.Rows.InsertAt(dr, 0);
 
             dgvBlock.DataSource = dt;
@@ -69,6 +70,7 @@ namespace PBALBS
             {
                 int BlockId = Convert.ToInt32(dgvBlock.DataKeys[e.Row.RowIndex].Values["BlockId"].ToString());
                 int DistrictId = Convert.ToInt32(dgvBlock.DataKeys[e.Row.RowIndex].Values["DistrictId"].ToString());
+                int PotatoTypeId= Convert.ToInt32(dgvBlock.DataKeys[e.Row.RowIndex].Values["PotatoTypeId"].ToString());
                 ((LinkButton)e.Row.FindControl("lnkUpdate")).CommandArgument = e.Row.RowIndex.ToString();
 
                 DropDownList ddl = (DropDownList)e.Row.FindControl("ddlDistrict");
@@ -89,6 +91,7 @@ namespace PBALBS
                 {
                     ((LinkButton)e.Row.FindControl("lnkUpdate")).Text = "Update";
                     ddl.SelectedValue = DistrictId.ToString();
+                    dd2.SelectedValue = PotatoTypeId.ToString();
                 }
             }
         }
@@ -115,7 +118,8 @@ namespace PBALBS
                 Block.BlockId = BlockId;
                 Block.DistrictId = int.Parse(((DropDownList)dgvBlock.Rows[RowIndex].FindControl("ddlDistrict")).SelectedValue);
                 Block.BlockName = ((TextBox)dgvBlock.Rows[RowIndex].FindControl("txtBlock")).Text;
-                ObjBlock.Save(Block);
+                Block.PotatoTypeId= int.Parse(((DropDownList)dgvBlock.Rows[RowIndex].FindControl("dd2PotatoType")).SelectedValue);
+                ObjBlock.UpSave(Block);
                 LoadBlockList();
 
             }

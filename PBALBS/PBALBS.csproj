@@ -77,6 +77,8 @@
     <Content Include="addeditemployee.aspx" />
     <Content Include="AddEditState.aspx" />
     <Content Include="AddEditUPBlock.aspx" />
+    <Content Include="AddEditUPDistrict.aspx" />
+    <Content Include="AddEditUPPotatoRate.aspx" />
     <Content Include="AddSubscription.aspx" />
     <Content Include="AgentMaster.aspx" />
     <Content Include="ApiConfiguration.aspx" />
@@ -175,6 +177,20 @@
     </Compile>
     <Compile Include="AddEditUPBlock.aspx.designer.cs">
       <DependentUpon>AddEditUPBlock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditUPDistrict.aspx.cs">
+      <DependentUpon>AddEditUPDistrict.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditUPDistrict.aspx.designer.cs">
+      <DependentUpon>AddEditUPDistrict.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditUPPotatoRate.aspx.cs">
+      <DependentUpon>AddEditUPPotatoRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditUPPotatoRate.aspx.designer.cs">
+      <DependentUpon>AddEditUPPotatoRate.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSubscription.aspx.cs">
       <DependentUpon>AddSubscription.aspx</DependentUpon>

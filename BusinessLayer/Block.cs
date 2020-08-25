@@ -52,5 +52,15 @@ namespace BusinessLayer
         {
             DataAccess.Block.Exchange_BlockWithState(BlockId1, BlockId2);
         }
+
+        public void UpSave(Entity.Block block)
+        {
+            DataAccess.Block.UpSave(block);
+        }
+
+        public DataTable UPBlockGetAll(string statename)
+        {
+            return DataAccess.Block.UPBlockGetAll(statename);
+        }
     }
 }

@@ -120,7 +120,7 @@ namespace PBALBS
         protected void LoadMsg()
         {
             BusinessLayer.PotatoRate ObjRate = new BusinessLayer.PotatoRate();
-            string Date = ddlMonth.SelectedValue.Trim() + "/" + ddlDay.SelectedValue.Trim() + "/" + ddlYear.SelectedValue.Trim() + " 00:00:00";
+            string Date = ddlDay.SelectedValue.Trim()  + "/" + ddlMonth.SelectedValue.Trim() + "/" + ddlYear.SelectedValue.Trim() + " 00:00:00";
             DataTable dt = ObjRate.GetRateByDate(Date);
 
             string day = ddlDay.SelectedValue.Trim();

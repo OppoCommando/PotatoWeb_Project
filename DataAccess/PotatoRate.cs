@@ -35,9 +35,45 @@ namespace DataAccess
            }
        }
 
-       public static DataTable GetRateByDate(string Year)
+        public static void UPSave(string date, DataTable dtRate, int potatoTypeId)
+        {
+            using (DataManager oDm = new DataManager())
+            {
+                oDm.Add("@pDate", SqlDbType.DateTime, Convert.ToDateTime(date));
+                oDm.Add("@pPotatoTypeId", SqlDbType.Int, potatoTypeId);
+                string RateDetailsXML = string.Empty;
+                if (dtRate != null && dtRate.Rows.Count > 0)
+                {
+                    using (DataSet ds = new DataSet())
+                    {
+                        ds.Tables.Add(dtRate);
+
+                        RateDetailsXML = ds.GetXml();
+                    }
+                }
+
+                oDm.Add("@pRateDetails", SqlDbType.Xml, RateDetailsXML);
+                oDm.CommandType = CommandType.StoredProcedure;
+                oDm.ExecuteNonQuery("usp_UPPotatoRate_Save");
+            }
+
+        }
+
+        public static DataTable GetUpRateByDate(string date, int potatoTypeId)
+        {
+            using (DataManager oDm = new DataManager())
+            {
+                oDm.Add("@pDate", SqlDbType.DateTime, Convert.ToDateTime(date));
+                oDm.Add("@pPotatoTypeId", SqlDbType.Int, potatoTypeId);
+                oDm.CommandType = CommandType.StoredProcedure;
+                return oDm.ExecuteDataTable("usp_UpPotatoRate_GetAllByDate");
+            }
+
+        }
+
+        public static DataTable GetRateByDate(string Year)
        {
-            DateTime d = Convert.ToDateTime(Year);
+           // DateTime d = Convert.ToDateTime(Year);
            using (DataManager oDm = new DataManager())
            {
                oDm.Add("@pDate", SqlDbType.DateTime, Convert.ToDateTime(Year));

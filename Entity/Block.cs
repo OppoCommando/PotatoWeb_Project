@@ -16,5 +16,8 @@ namespace Entity
         public int DistrictId { get; set; }
         public string BlockName { get; set; }
         public int StateId { get; set; }
+
+        public int PotatoTypeId { get; set; }
+        public string PotatoTypeName { get; set; }
     }
 }

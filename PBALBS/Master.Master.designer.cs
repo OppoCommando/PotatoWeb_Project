@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBALBS {
-    
-    
-    public partial class Master {
-        
+namespace PBALBS
+{
+
+
+    public partial class Master
+    {
+
         /// <summary>
         /// head control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Settings control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Settings;
-        
+
         /// <summary>
         /// AddEditDistrict control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditDistrict;
-        
+
         /// <summary>
         /// AddEditBlock control.
         /// </summary>
@@ -65,7 +67,25 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditBlock;
-        
+
+        /// <summary>
+        /// AddEditUpBlock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditUpBlock;
+
+        /// <summary>
+        /// AddEditUPDistrict control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditUPDistrict;
+
         /// <summary>
         /// AgentMaster control.
         /// </summary>
@@ -74,7 +94,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AgentMaster;
-        
+
         /// <summary>
         /// AddEditState control.
         /// </summary>
@@ -83,7 +103,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditState;
-        
+
         /// <summary>
         /// AddEditBlockWithState control.
         /// </summary>
@@ -92,7 +112,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditBlockWithState;
-        
+
         /// <summary>
         /// AddMember control.
         /// </summary>
@@ -101,7 +121,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddMember;
-        
+
         /// <summary>
         /// MemberList control.
         /// </summary>
@@ -110,7 +130,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl MemberList;
-        
+
         /// <summary>
         /// Li1 control.
         /// </summary>
@@ -119,7 +139,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li1;
-        
+
         /// <summary>
         /// AddPotato control.
         /// </summary>
@@ -128,7 +148,16 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddPotato;
-        
+
+        /// <summary>
+        /// AddEditUPPotatoRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddEditUPPotatoRate;
+
         /// <summary>
         /// AddMarketRate control.
         /// </summary>
@@ -137,7 +166,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AddMarketRate;
-        
+
         /// <summary>
         /// RateList control.
         /// </summary>
@@ -146,7 +175,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RateList;
-        
+
         /// <summary>
         /// ImportExport control.
         /// </summary>
@@ -155,7 +184,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImportExport;
-        
+
         /// <summary>
         /// SMS control.
         /// </summary>
@@ -164,7 +193,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SMS;
-        
+
         /// <summary>
         /// SendSMS control.
         /// </summary>
@@ -173,7 +202,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SendSMS;
-        
+
         /// <summary>
         /// SMSTrigger control.
         /// </summary>
@@ -182,7 +211,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SMSTrigger;
-        
+
         /// <summary>
         /// SendSMSPortal control.
         /// </summary>
@@ -191,7 +220,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SendSMSPortal;
-        
+
         /// <summary>
         /// SMSTriggerPortal control.
         /// </summary>
@@ -200,7 +229,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SMSTriggerPortal;
-        
+
         /// <summary>
         /// Circular control.
         /// </summary>
@@ -209,7 +238,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Circular;
-        
+
         /// <summary>
         /// Subscription control.
         /// </summary>
@@ -218,7 +247,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Subscription;
-        
+
         /// <summary>
         /// SubscriptionApproval control.
         /// </summary>
@@ -227,7 +256,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl SubscriptionApproval;
-        
+
         /// <summary>
         /// LiLoadingUnloading control.
         /// </summary>
@@ -236,7 +265,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LiLoadingUnloading;
-        
+
         /// <summary>
         /// LiCapacityMaster control.
         /// </summary>
@@ -245,7 +274,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LiCapacityMaster;
-        
+
         /// <summary>
         /// LiUnloading control.
         /// </summary>
@@ -254,7 +283,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LiUnloading;
-        
+
         /// <summary>
         /// LiSendReport control.
         /// </summary>
@@ -263,7 +292,7 @@ namespace PBALBS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LiSendReport;
-        
+
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>

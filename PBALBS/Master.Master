@@ -25,6 +25,8 @@
                     <ul>
                         <li id="AddEditDistrict" runat="server"><a href="AddEditDistrict.aspx">District</a></li>
                         <li id="AddEditBlock" runat="server"><a href="AddEditBlock.aspx">Block</a></li>
+                        <li id="AddEditUpBlock" runat="server"><a href="AddEditUpBlock.aspx">Up Block</a></li>
+                         <li id="AddEditUPDistrict" runat="server"><a href="AddEditUPDistrict.aspx">Up District</a></li>
                         <li id="AgentMaster" runat="server"><a href="AgentMaster.aspx">Agent</a></li>
                         <li id="AddEditState" runat="server"><a href="AddEditState.aspx">All India State</a></li>
                         <li id="AddEditBlockWithState" runat="server"><a href="AddEditBlockWithState.aspx">All India Block With State</a></li>
@@ -36,6 +38,8 @@
                 <li class='has-sub' id="Li1" runat="server"><a href='#'>Potato Rate</a>
                     <ul>
                 <li id="AddPotato" runat="server"><a href="AddEditPotatoRate.aspx">Add Potato Rate</a></li>
+                <li id="AddEditUPPotatoRate" runat="server"><a href="AddEditUPPotatoRate.aspx">Add UP Potato Rate</a></li>
+                        
                 <li id="AddMarketRate" runat="server"><a href="AddEditAIndiaMarketRate.aspx">Add All India Market Rate</a></li>
                          </ul>
                 </li>

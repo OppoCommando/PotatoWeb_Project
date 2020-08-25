@@ -29,5 +29,15 @@ namespace BusinessLayer
         {
             return DataAccess.PotatoRate.GetAll(StartDate, EndDate);
         }
+
+        public DataTable GetUpRateByDate(string date, int potatoTypeId)
+        {
+            return DataAccess.PotatoRate.GetUpRateByDate(date, potatoTypeId);
+        }
+
+        public void UPSave(string date, DataTable dt, int potatoTypeId)
+        {
+            DataAccess.PotatoRate.UPSave(date, dt, potatoTypeId);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AddEditUpBlock.aspx.cs" Inherits="PBALBS.AddEditUpBlock" %>
+﻿<%@ Page Title="Add Edit Up Block" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AddEditUpBlock.aspx.cs" Inherits="PBALBS.AddEditUpBlock" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script type="text/javascript">
@@ -72,7 +72,7 @@
                 <asp:GridView ID="dgvBlock" runat="server" Width="100%" AllowPaging="false" 
                     AutoGenerateColumns="false" GridLines="none" BorderColor="#1398ED" 
                     BorderStyle="Solid" BorderWidth="1px"
-                    DataKeyNames="BlockId,DistrictId" onrowcommand="dgvBlock_RowCommand" 
+                    DataKeyNames="BlockId,DistrictId,PotatoTypeId" onrowcommand="dgvBlock_RowCommand" 
                     onrowdatabound="dgvBlock_RowDataBound" onrowdeleting="dgvBlock_RowDeleting">
                  <Columns>
                     <asp:TemplateField>

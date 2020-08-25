@@ -37,6 +37,31 @@ namespace DataAccess
             }
         }
 
+        public static void UpSave(Entity.Block Block)
+        {
+            using (DataManager oDm = new DataManager())
+            {
+                oDm.Add("@pBlockId", SqlDbType.Int, ParameterDirection.Input, Block.BlockId);
+                oDm.Add("@pDistrictId", SqlDbType.Int, ParameterDirection.Input, Block.DistrictId);
+                oDm.Add("@pBlockName", SqlDbType.VarChar, 50, ParameterDirection.Input, Block.BlockName);
+                oDm.Add("@pPotatoTypeId", SqlDbType.Int, ParameterDirection.Input, Block.PotatoTypeId);
+                oDm.CommandType = CommandType.StoredProcedure;
+                oDm.ExecuteNonQuery("usp_UpBlock_Save");
+            }
+
+        }
+        public static DataTable UPBlockGetAll(string statename)
+        {
+            using (DataManager oDm = new DataManager())
+            {
+                oDm.Add("@pStatename", SqlDbType.VarChar, 50, ParameterDirection.Input, statename);
+                oDm.CommandType = CommandType.StoredProcedure;
+                return oDm.ExecuteDataTable("usp_UPBlock_GetAll");
+            }
+
+        }
+
+
         public static DataTable GetAll(string Statename)
         {
             using (DataManager oDm = new DataManager())
@@ -56,10 +81,7 @@ namespace DataAccess
             }
         }
 
-
-
-
-        public static void Delete(int BlockId)
+         public static void Delete(int BlockId)
         {
             using (DataManager oDm = new DataManager())
             {
